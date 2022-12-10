@@ -180,11 +180,15 @@ Below you can see a heatmap of all the remaining features correlated with price
 ## Conclusions
 
 Looking at the differents models tried above, we can see when we only consider a simple linear regression model
-we account for 26.5% of the variance. We want to improve this, so with all the features included (excluding those with p-values greater than 0.05) we can see that we account for 42% of the variance. This means, when you are looking to improve the value of your home, if it's in the king's county, this is the impact each feature has:
+we account for 26.5% of the variance. We want to improve this, so with all the features included (excluding those with p-values greater than 0.05) we can see that we account for 42% of the variance. As the above models have been box cox transformed to adjust for features which had a skew to them, in order to make sense of these metrics we have to reverse transform the co-efficients for each feature. Having done that we find the below.
 
-- The value of your property increase by X for each square foot of above space added (doesn't include the basement)
-- By adding another bathroom you increase the value by X
-- By improving the grade of your house by 1 on the scale, your property value increases by Z
+This means, when you are looking to improve the value of your home, if it's in the king's county, this is the impact each feature has:
+
+- The value of your property increase by $32.8 for each square foot of above space added (doesn't include the basement)
+- By adding another 1/4 bathroom you increase the value by $1.56k
+- By improving the grade of your house by 1 on the scale, your property value increases by roughly $12.5k
+
+Based on the dataset that was provided, there was no clear evidence about how much additional value having a basement adds to the property. 
 
 ## Next Steps
 
