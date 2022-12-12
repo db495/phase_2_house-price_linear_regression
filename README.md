@@ -46,8 +46,10 @@ Below you can see a heatmap of all the remaining features correlated with price
 
 ![png](images/output_26_1.png)
     
+With this information we can create our baseline model with the feature most heavily correlated with our target variable. In this situation that is the `sqft_above` feature
 
 ### Baseline Model
+Below is the results of our baseline linear regression model, this is just taking into consideration one feature and the table below shows a lot of interesting stats, such as the R^2 score, along with the co-efficient values for each feature, the y intercept value and the p-values for each feature.
 
 
 <table class="simpletable">
@@ -109,7 +111,7 @@ Below you can see a heatmap of all the remaining features correlated with price
 
 
 ### Final Model - Top 4 correlated features only
-
+After iterating twice, after establishing a base model to improve upon, the final model that was chosen ended up being a multivariate regression model focusing solely on the influence of the top 4 most correlated features from the dataset. Below you can see the end results, with the final model still having some significant areas for improvement, as we're currently only able to account for ~ 42% of the variation in the price feature.
 
 
 <table class="simpletable">
